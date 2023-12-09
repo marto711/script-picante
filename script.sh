@@ -1,11 +1,12 @@
 #!/bin/bash
 
+titulo="Resultados nmap"
 echo "<html>
     <head>
-        <title>Resultados nmap</title>
+        <title>$titulo</title>
     </head>
     <body>
-        <h1>Resultados nmap</h1>
+        <h1>$titulo</h1>
     	<p1>Aqui van los resultados de nmap</p1>
      </body>
 </html>"
