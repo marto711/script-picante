@@ -4,6 +4,12 @@ TITULO="Resultados nmap"
 FECHA_ACTUAL="$(date)"
 TIMESTAMP="Informe generado el $FECHA_ACTUAL por el usuario $USERNAME"
 
+#prueba de variable local, solo sirve dentro de la funcion
+funcion_pichi () {
+	local variable="variable local"
+	echo $variable
+	return
+}
 #Genera una serie de comandos con nmap, ejecuta la serie.
 nmap_exec () {
 	echo "[INFO] Ejecutnado nmap de la red $1, banca un toque..."
@@ -27,7 +33,8 @@ cat <<EOF
 
 EOF
 }
-
+#probando funcion local
+funcion_pichi
 #Ejecuta la función nmap_exec que contiene el inicio de la acción, la acción y la salida en un archivo .raw
 nmap_exec "192.168.1.0/24" "salida_nmap2.raw"
 
