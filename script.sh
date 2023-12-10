@@ -11,9 +11,10 @@
 #     </body>
 #</html>"
 
-numero="siete"
+numero=7
 
-if [ $numero == siete ]; then 
+#-le quiere decir menor o igual
+if [ $numero -le 6 ]; then 
 
 	echo "la posta es posta"
 else
