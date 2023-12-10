@@ -4,16 +4,19 @@ TITULO="Resultados nmap"
 FECHA_ACTUAL="$(date)"
 TIMESTAMP="Informe generado el $FECHA_ACTUAL por el usuario $USERNAME"
 
-echo "<html>
+cat <<EOF
+<html>
     <head>
         <title>$TITULO</title>
     </head>
     <body>
        <h1>$TITULO</h1>
-    	<p1>Aqui van los resultados de nmap</p1>
-	<p2>$TIMESTAMP</p2>
+        <p1>Aqui van los resultados de nmap</p1>
+        <p2>$TIMESTAMP</p2>
      </body>
-</html>"
+</html>
+
+EOF
 
 numero=7
 
