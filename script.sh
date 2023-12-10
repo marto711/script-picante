@@ -15,8 +15,9 @@ numero=7
 
 #-le quiere decir menor o igual
 if [ $numero -le 6 ]; then 
-
 	echo "la posta es posta"
+elif [ 5 -le 10 ]; then 
+	echo "la de arriba no se cumple, entonces me cumplo yo. Soy un else travesti"
 else
 	echo "la posta no es posta"
 
