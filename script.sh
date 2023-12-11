@@ -14,7 +14,8 @@ funcion_pichi () {
 nmap_exec () {
 	echo "[INFO] Ejecutnado nmap de la red $1, banca un toque..."
 	sudo nmap -sV $1 > $2
-        echo "[OK] Fichero salida_nmap.raw generado correctamente"	
+        echo "[OKi] Fichero salida_nmap.raw generado correctamente"
+	exit	
 }
 
 #Toma las lineas de codigo HTML y las mete en una función para usarla en otros momentos.
