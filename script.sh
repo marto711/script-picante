@@ -78,3 +78,22 @@ if (( 4 > 5 )); then
 else 
 	echo "Flashaste mi pollo"
 fi
+
+#####
+#AND
+
+if ((4 < 5)) && (( ! 12 < 10)); then
+	echo "vas bien"
+else 
+	echo "no es cierto mi loco"
+fi
+######
+#OR
+if ((4 < 5)) || ((12 < 10)); then
+        echo "vas bien"
+else
+        echo "no es cierto mi loco"
+fi
+
+
+
