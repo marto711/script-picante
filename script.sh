@@ -49,13 +49,24 @@ echo "[OK] Reporte resultados.html generado correctamente"
 numero=7
 
 #-le quiere decir menor o igual
-if [ $numero -le 6 ]; then 
-	echo "la posta es posta"
-elif [ 5 -le 10 ]; then 
-	echo "la de arriba no se cumple, entonces me cumplo yo. Soy un else travesti"
-else
-	echo "la posta no es posta"
 
+#Deentro de los corchetes se encuentra la función o lo que se tomara como referencia de verdadero o falso, siendo entonces
+#Si [esto sucede]; entonces (then)
+#echo (decir "xxx")
+#Elif quiere decir "sino si" una especie de if antes de que sucede el else, una nueva condicion de que si otra cosa sucede antes generar una generalidad que de como respuesta else
+#luego else, que es la generalidad que toma el hilo al no cumplirse la primer orden, o segunda. En donde si tal o tal no pasa, entonces sucede esto.
+
+##Este if lo que hace es buscar el archivo que se genera con la funcion "nmap_exec" y consultar si se generé hace menos de 30 min, si coinciden
+##las especdificaciones, me dirá que ya existe
+if [ $(find salida_nmap.raw -mmin -30) ]; then	
+	echo "[INFO] El fichero existe y tiene una antigûedad menor a 30 minutos"
+#elif [ 5 -le 10 ]; then 
+#	echo "la de arriba no se cumple, entonces me cumplo yo. Soy un else travesti"
+
+## Si el if no se cumple, se generará ese archivo de salida, por ende si ejecuto el script ahora, me lo va a crear porque lo hice hace unas horas, 
+## pero si lo vuelvo a ejecutar una vez hecho el archivo, ahi si me va a tirar el mensaje de que ya existe
+else
+	nmap_exec "192.168.1.0/24" "salida_nmap.raw"
 fi
 
 #expr es lo que se va a evaluar si es verdadero o falso, luego va el then (entonces)
