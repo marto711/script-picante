@@ -71,4 +71,10 @@ fi
 
 #expr es lo que se va a evaluar si es verdadero o falso, luego va el then (entonces)
 #lo importante está en "expr"
-    
+
+##USOS DEL IF PARA NUMEROS
+if (( 4 > 5 )); then
+	echo "Estas en lo cierto broder"
+else 
+	echo "Flashaste mi pollo"
+fi
